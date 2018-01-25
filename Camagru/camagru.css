@@ -1,0 +1,11 @@
+/* Media Queries */
+
+/*Tablets*/
+@media screen and (max-width:768px){
+	body {background:cyan;}
+}
+
+/*Mobiles*/
+@media all and (max-width: 480px){
+	body {background:grey;}
+}
