@@ -1,4 +1,4 @@
-<!-- Model : acces aux donnees, fonctions, classes... //-->
+<!-- Modèle : acces aux donnees, fonctions, classes... //-->
 
 <?PHP
 error_reporting(-1);
@@ -55,9 +55,18 @@ set_error_handler("var_dump");
 		mail($email, $subject, $message, $headers);
 	}
 
-	function test_input($data) {
-	  $data = trim($data);
-	  $data = stripslashes($data);
-	  $data = htmlspecialchars($data);
-  	return $data;
+	function send_forgotten_pswd_email($login, $email, $hash) {
+		$subject = 'Camagru - Réinitialiser mon mot de passe';
+		$message = ''.$login.',<br>
+
+		Nous avons reçu une demande de réinitialisation de votre mot de passe.<br>
+		Si vous êtes bien à l\'origine de cette demande, veuillez cliquer
+		<a href="http://localhost:8080/Camagru/forget_pswd.php?email='.$email.'&hash='.$hash.'&change_pswd=1">ICI</a>
+		pour le modifier.<br>
+		A tout de suite sur Camagru !<br>
+
+		';
+		$headers = 'Content-type: text/html; charset=UTF-8' . "\r\n";
+		$headers .= 'from:noreplay@camagru.fr' . "\r\n";
+		mail($email, $subject, $message, $headers);
 	}

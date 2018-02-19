@@ -2,6 +2,7 @@
 require 'Modele.php';
 $page_title = 'Compte activé';
 
+
 if (isset($_GET['email']) && !empty($_GET['email'])
     AND isset($_GET['hash']) && !empty($_GET['hash'])) {
     $email = $_GET['email'];
@@ -25,5 +26,5 @@ if (isset($_GET['email']) && !empty($_GET['email'])
 else {
   $page_content = "<br>Approche invalide, veuillez utiliser le lien envoyé à l'adresse e-mail
   fournie lors de votre inscription."; }
-  
+
 require 'gabarit.php';

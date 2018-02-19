@@ -1,3 +1,77 @@
+/* The signup.php message box is shown when the user clicks on the password field */
+#message {
+    display:none;
+    position: relative;
+}
+#message p {
+    padding: 2px 35px;
+}
+
+#valid_username {
+    display:none;
+    position: relative;
+}
+#valid_username p {
+    padding: 2px 35px;
+}
+
+#unique_email {
+    display:none;
+    position: relative;
+}
+#unique_email p {
+    padding: 2px 35px;
+}
+
+#email_pattern {
+    display:none;
+    position: relative;
+}
+#email_pattern p {
+    padding: 2px 35px;
+}
+
+.already_exists {
+  color:red;
+}
+
+#signup_button {
+  display:block;
+}
+
+#forgot_password {
+  display:none;
+}
+
+input[type=submit][disabled] {
+
+}
+
+.already_exists:before {
+  color:red;
+  position: relative;
+  left: -2%;
+  content: "✖";
+}
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+    color: green;
+}
+.valid:before {
+    position: relative;
+    left: -2%;
+    content: "✔";
+}
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+    color: red;
+}
+.invalid:before {
+    position: relative;
+    left: -2%;
+    content: "✖";
+}
+
 /* Media Queries */
 
 /*Tablets*/

@@ -5,7 +5,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content"width=device-width">
-		<link rel=stylesheet href=camagru.css />
+		<link rel=stylesheet href=camagru.css>
 		<title><?PHP echo $page_title . " - Camagru" ?></title> <!-- Element specifique -->
 	</head>
 
@@ -17,6 +17,7 @@
 				if (isset($_SESSION['login'])) {
 					ob_start(); ?>
 					<a href="logout.php">Se déconnecter</a><br>
+					<a href="account.php">Mon compte</a><br>
 					<?PHP
 					$logout = ob_get_clean();
 					echo $logout;
