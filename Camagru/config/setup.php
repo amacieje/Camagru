@@ -23,7 +23,8 @@
       email VARCHAR(70),
       hash VARCHAR(255) NOT NULL,
       valid INT(1) NOT NULL DEFAULT '0',
-      date TIMESTAMP)";
+      alerts INT(1) NOT NULL DEFAULT '1',
+      signup_date TIMESTAMP)";
       $bdd->exec($sql);
       echo "Table users successfully created\n";
   }
